@@ -12,17 +12,17 @@ public class MapController : MonoBehaviour
 
     // max 640 by 640 pixels
     public int mapWidth = 640;
-    public int mapHeigh = 640;
+    public int mapHeight = 640;
 
     public enum mapType { roadmap, satellite, hybrid, terrain };
     public mapType mapSelected;
 
     public int scale; // scale can be 1,2 for free plan and can also be 4 for paid
 
-    IEnumerator GetGoogleMap()
+    public IEnumerator GetGoogleMap(float lat,float lon)
     {
         url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
-                    "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeigh + "&scale=" + scale
+                    "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale
                     + "&maptype=" + mapSelected +
                     "&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284";
         WWW www = new WWW(url);
@@ -32,8 +32,8 @@ public class MapController : MonoBehaviour
         www.LoadImageIntoTexture(textureToReplace);
     }
 
-    void Start()
-    {
-        StartCoroutine(GetGoogleMap());
-    }
+    //void Start()
+    //{
+    //    StartCoroutine(GetGoogleMap());
+    // }
 }

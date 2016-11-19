@@ -8,7 +8,7 @@ public class RealtimeLocationData : MonoBehaviour
     public float latitude { get; set; }
     public float longitude { get; set; }
 
-    IEnumerator GetLocation()
+    public IEnumerator GetLocation()
     {
         Debug.Log("Starting");
         //Pass true to use mocked Location. Pass false or don't pass anything to use real location
@@ -68,7 +68,7 @@ public class RealtimeLocationData : MonoBehaviour
             string location = "Latitude: " + latitude + "\nLongitude: " + longitude;
             string morelocationdata = "Altitude: " + locationServiceExt.lastData.altitude + "Horizontal Accuracy: " + locationServiceExt.lastData.horizontalAccuracy + "TimeStamp: " + locationServiceExt.lastData.timestamp;
 
-            print(location);
+            // print(location);
         }
 
         // Stop service if there is no need to query location updates continuously

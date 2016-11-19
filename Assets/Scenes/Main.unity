@@ -235,6 +235,12 @@ Prefab:
       propertyPath: mapTile
       value: 
       objectReference: {fileID: 1866050634}
+    - target: {fileID: 114000013348611482, guid: 8f3e27c11f995c54da3770f8a74b8f2e,
+        type: 2}
+      propertyPath: realTimeLoc
+      value: 
+      objectReference: {fileID: 114000010328477562, guid: 94eb90ff3756f364fb35421aac5a3b35,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f3e27c11f995c54da3770f8a74b8f2e, type: 2}
   m_IsPrefabParent: 0
@@ -270,8 +276,8 @@ MonoBehaviour:
   lon: -117.16109
   zoom: 19
   mapWidth: 640
-  mapHeigh: 640
-  mapSelected: 0
+  mapHeight: 640
+  mapSelected: 2
   scale: 0
 --- !u!212 &1866050635
 SpriteRenderer:
