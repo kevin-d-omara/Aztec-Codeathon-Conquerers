@@ -18,6 +18,7 @@ public class MapController : MonoBehaviour
     public mapType mapSelected;
 
     public int scale; // scale can be 1,2 for free plan and can also be 4 for paid
+
     IEnumerator GetGoogleMap()
     {
         url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
